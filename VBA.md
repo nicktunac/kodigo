@@ -3,4 +3,15 @@ Get last row number of a Column
 
     LastRow = Range("A1").CurrentRegion.Rows.Count
 
+Get rows after filter
+
+    Dim r As Range
+    Dim StartRow As Long
+    Dim EndRow As Long
+
+    Set r = ActiveSheet.Range("A2:A81000").Rows.SpecialCells(xlCellTypeVisible)
+    ' r is now $A$73351:$A$77343
+
+    StartRow = r.Row ' returns 73351
+    EndRow = r.Row + r.Rows.Count - 1 ' returns 77343
 
