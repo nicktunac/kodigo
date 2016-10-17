@@ -19,5 +19,15 @@ Reference a workbook
 
     Dim workbook As Excel.Workbook
     Set workbook = Workbooks.Open("C:\Documents and Settings\xxxx\Desktop\test1.xls")
+    
+ Iterate to a directory
+ 
+    Dim StrFile As String
+    StrFile = Dir(directory & "\*.xlsx*")
+    Do While Len(StrFile) > 0
+        Debug.Print StrFile
+        StrFile = Dir
+    Loop
+    
 
 
