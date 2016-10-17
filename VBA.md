@@ -14,4 +14,10 @@ Get rows after filter
 
     StartRow = r.Row ' returns 73351
     EndRow = r.Row + r.Rows.Count - 1 ' returns 77343
+    
+Reference a workbook
+
+    Dim workbook As Excel.Workbook
+    Set workbook = Workbooks.Open("C:\Documents and Settings\xxxx\Desktop\test1.xls")
+
 
