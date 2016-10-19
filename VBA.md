@@ -29,5 +29,11 @@ Reference a workbook
         StrFile = Dir
     Loop
     
+Copy From Sheet-X to Sheet-Y
 
-
+    Sheets("<Sheet_Name>").Select
+    Range("A(X):A(Y)").Select
+    Selection.Copy
+    Sheets("<Sheet_Name>").Select
+    Range("A(X)").Select
+    ActiveSheet.Paste
