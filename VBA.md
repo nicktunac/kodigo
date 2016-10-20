@@ -37,3 +37,8 @@ Copy From Sheet-X to Sheet-Y
     Sheets("<Sheet_Name>").Select
     Range("A(X)").Select
     ActiveSheet.Paste
+
+Call a Function with multiple parameter
+
+    Call generateURL(n, firstCol) , or
+    generateURL n, firstCol
