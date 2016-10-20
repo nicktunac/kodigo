@@ -47,3 +47,8 @@ Save workbook without saving
     
     wbk.Activate
     ActiveWorkbook.Close Savechanges:=False
+    
+Disable Screenupdate and Display Alerts
+
+    Application.ScreenUpdating = False
+    Application.DisplayAlerts = False
