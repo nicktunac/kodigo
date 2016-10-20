@@ -42,3 +42,8 @@ Call a Function with multiple parameter
 
     Call generateURL(n, firstCol) , or
     generateURL n, firstCol
+    
+Save workbook without saving    
+    
+    wbk.Activate
+    ActiveWorkbook.Close Savechanges:=False
