@@ -52,3 +52,7 @@ Disable Screenupdate and Display Alerts
 
     Application.ScreenUpdating = False
     Application.DisplayAlerts = False
+    
+Remove Autofilter (If filter is already activated)
+
+    Cells.AutoFilter
