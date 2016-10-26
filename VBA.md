@@ -56,3 +56,8 @@ Disable Screenupdate and Display Alerts
 Remove Autofilter (If filter is already activated)
 
     Cells.AutoFilter
+    
+Exact, compare 2 selection
+    
+    =AND(EXACT(<RANGES>,<RANGES>)) then CTRL + SHIFT + ENTER
+    
