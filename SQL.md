@@ -1,5 +1,17 @@
 #SQL#
 
+Finding Table with more than 1 entry
+
+    SELECT 
+     <column_name> ,
+     COUNT(*) count
+    FROM 
+     <Table_Name>
+    GROUP BY
+     <column_name>
+    Having
+    COUNT(*) > 1
+
 #MS SQL#
 
 Truncate all tables in a database [ MS SQL]
