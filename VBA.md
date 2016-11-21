@@ -97,3 +97,10 @@ FuzzyMatching
     FuzzyMatch = 100 - CLng((distance(string1_length, string2_length) * 100) / MaxL)
 
     End Function
+    
+For Loop
+
+    For LCounter = 1 to 5
+      MsgBox (LCounter)
+    Next LCounter
+
