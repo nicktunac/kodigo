@@ -104,3 +104,12 @@ For Loop
       MsgBox (LCounter)
     Next LCounter
 
+Create Sheet
+
+    Private Sub CreateSheet()
+        Dim ws As Worksheet
+        With ThisWorkbook
+            Set ws = .Sheets.Add(After:=.Sheets(.Sheets.Count))
+            ws.Name = "Tempo"
+        End With
+    End Sub
