@@ -15,29 +15,7 @@ public class TestObject implements Comparable<TestObject>{
     private String category;
     private String town;
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public String getTown() {
-        return town;
-    }
-
-    public void setTown(String town) {
-        this.town = town;
-    }
+    // getter and setter
 
     public TestObject(String title, String category, String town) {
         this.title = title;
@@ -61,14 +39,5 @@ public class TestObject implements Comparable<TestObject>{
             return o1Category.compareTo(o2Category);
         }
     };
-
-    @Override
-    public String toString() {
-        return "TestObject{" +
-                "title='" + title + '\'' +
-                ", category='" + category + '\'' +
-                ", town='" + town + '\'' +
-                '}';
-    }
 }
 ```
