@@ -6,9 +6,6 @@ Sorting with objects in Java
 ```java
 import java.util.Comparator;
 
-/**
- * Created by DTunac on 11/23/2016.
- */
 public class TestObject implements Comparable<TestObject>{
 
     private String title;
