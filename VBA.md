@@ -217,3 +217,7 @@ Send Email
         End With
 
     End Function
+    
+Check if Cell is Empty
+
+    IsEmpty(Range("A1").Value)
