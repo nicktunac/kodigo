@@ -221,3 +221,42 @@ Send Email
 Check if Cell is Empty
 
     IsEmpty(Range("A1").Value)
+
+Select a File in VBA (Single File)
+
+    Sub Units_Excel()
+        Dim fd As Office.FileDialog
+        Set fd = Application.FileDialog(msoFileDialogFilePicker)
+        With fd
+          .AllowMultiSelect = False
+          .Title = "Please select the file."
+          .Filters.Clear
+          .Filters.Add "All Files", "*.*"
+          If .Show = True Then
+            'Set Value in .SelectedItems(1)
+            Range("B1").Value = .SelectedItems(1)
+          End If
+        End With
+    End Sub
+    
+Select Files in VBA
+
+    With fd
+      .AllowMultiSelect = True
+
+      ' Set the title of the dialog box.
+      .Title = "Please select files to process."
+
+      .Filters.Clear
+      .Filters.Add "Excel File", "*.xlsx"
+      .Filters.Add "All Files", "*.*"
+      
+      FileCount = 0
+      If .Show = -1 Then
+        ReDim Files(.SelectedItems.Count)
+        For I = 1 To .SelectedItems.Count
+            Files(FileCount) = .SelectedItems(I)
+            FileCount = FileCount + 1
+        Next I
+      End If
+    End With
