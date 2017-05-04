@@ -240,6 +240,11 @@ Select a File in VBA (Single File)
     End Sub
     
 Select Files in VBA
+    
+    Dim fd As Office.FileDialog
+    Set fd = Application.FileDialog(msoFileDialogFilePicker)
+    Dim Files() As String
+    Dim FileCount As Integer
 
     With fd
       .AllowMultiSelect = True
@@ -260,3 +265,8 @@ Select Files in VBA
         Next I
       End If
     End With
+    
+    If FileCount < 1 Then
+        MsgBox "Please Select Files"
+        Exit Sub
+    End If
